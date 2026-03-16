@@ -1,0 +1,261 @@
+:root {
+  --primary: #1a2b4b;
+  --secondary: #f58220;
+  --bg-main: #f8fafc;
+  --bg-sidebar: #0f172a;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --accent: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  background-color: var(--bg-sidebar);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--secondary);
+}
+
+.sidebar .subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: white;
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  ring: 2px var(--accent);
+}
+
+#team-select {
+  height: 350px;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.main-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#selected-count {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.viz-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.viz-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+}
+
+#viz {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Team Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color);
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card .meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* D3 Elements */
+.team-shape {
+  transition: fill-opacity 0.3s, stroke-width 0.3s;
+  cursor: pointer;
+}
+
+.team-shape:hover {
+  fill-opacity: 0.6;
+  stroke-width: 5;
+}
+
+#status-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+}
+
+.status-msg {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.875rem;
+}

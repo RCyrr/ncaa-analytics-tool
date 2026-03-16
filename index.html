@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NCAA Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <header>
+        <h1>NCAA Tool</h1>
+        <p class="subtitle">2026 Season Analytics</p>
+      </header>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label for="tournament-filter">Tournament Status</label>
+          <select id="tournament-filter">
+            <option value="all">All Teams</option>
+            <option value="qualified">Qualified (68)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="display-mode">Display Mode</label>
+          <select id="display-mode">
+            <option value="default">Default (Net/Pace/ATO/eFG%)</option>
+            <option value="efficiency">Efficiency (ORtg/DRtg/eFG%/ATO)</option>
+            <option value="performance">Performance (ORtg/DRtg/Pace/eFG%)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="team-search">Search Teams</label>
+          <input type="text" id="team-search" placeholder="Type to search...">
+        </div>
+
+        <div class="control-group">
+          <div class="label-row">
+            <label for="team-select">Select Teams</label>
+            <button id="clear-selection" class="btn-text">Clear All</button>
+          </div>
+          <select id="team-select" multiple></select>
+          <p class="hint">Hold Ctrl/Cmd to select multiple</p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div id="selection-summary">
+          <h2>Team Comparison</h2>
+          <p id="selected-count">No teams selected</p>
+        </div>
+      </header>
+
+      <section class="viz-container">
+        <div class="card viz-card">
+          <svg id="viz" width="700" height="600"></svg>
+        </div>
+        
+        <div id="team-details" class="details-grid">
+          <!-- Team cards will be injected here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="status-container"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

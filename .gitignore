@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# VS Code
+.vscode/
+
+# Data
+# We keep the processed CSVs but ignore the raw source files
+data/*.xls
+data/*.txt
+!data/teams_2026.csv
+!data/bracket_2026.csv
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,69 @@
+region,seed,team
+East,1,Duke
+East,2,UConn
+East,3,Illinois
+East,4,Kansas
+East,5,St. John's
+East,6,Texas Tech
+East,7,UCLA
+East,8,Ohio State
+East,9,TCU
+East,10,UCF
+East,11,NC State
+East,11,Texas
+East,12,Northern Iowa
+East,13,California Baptist
+East,14,North Dakota State
+East,15,Furman
+East,16,Siena
+West,1,Arizona
+West,2,Michigan
+West,3,Purdue
+West,4,Gonzaga
+West,5,San Diego State
+West,6,Colorado State
+West,7,Boise State
+West,8,Mississippi State
+West,9,Florida Atlantic
+West,10,New Mexico
+West,11,VCU
+West,12,Drake
+West,13,Sam Houston
+West,14,Grand Canyon
+West,15,Colgate
+West,16,Lehigh
+West,16,Prairie View A&M
+Midwest,1,Florida
+Midwest,2,Marquette
+Midwest,3,Creighton
+Midwest,4,Auburn
+Midwest,5,Memphis
+Midwest,6,Tennessee
+Midwest,7,Texas A&M
+Midwest,8,Nebraska
+Midwest,9,Seton Hall
+Midwest,10,Indiana
+Midwest,11,SMU
+Midwest,11,Miami (OH)
+Midwest,12,Liberty
+Midwest,13,Vermont
+Midwest,14,Yale
+Midwest,15,UC Irvine
+Midwest,16,UMBC
+Midwest,16,Howard
+South,1,Michigan State
+South,2,Alabama
+South,3,Baylor
+South,4,Arkansas
+South,5,Dayton
+South,6,Virginia
+South,7,Clemson
+South,8,Providence
+South,9,Northwestern
+South,10,Utah State
+South,11,Oklahoma
+South,12,Charleston
+South,13,Akron
+South,14,South Dakota State
+South,15,Longwood
+South,16,Idaho
