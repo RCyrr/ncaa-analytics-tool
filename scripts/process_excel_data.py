@@ -78,7 +78,8 @@ def parse_html_excel(file_path):
         if not team or team.lower() == 'school': # Skip header-like rows
             continue
             
-        net_rating = row_data.get('net_rtg') or row_data.get('net_rating') or row_data.get('nrtg')
+        # Use SRS as the Net Rating as requested
+        net_rating = row_data.get('srs') or row_data.get('net_rtg') or row_data.get('net_rating') or row_data.get('nrtg')
         pace = row_data.get('pace')
         ast = row_data.get('ast')
         tov = row_data.get('tov')

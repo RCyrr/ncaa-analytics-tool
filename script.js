@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <h3>${d.team}</h3>
       <div class="meta">${d.seed ? d.seed + ' Seed • ' : ''}${d.region || 'No Region'}</div>
       <div class="stats-row">
-        <div class="stat-item"><span class="stat-label">Net Rating</span><span class="stat-value">${d.net_rating}</span></div>
+        <div class="stat-item"><span class="stat-label">SRS (Adj Net)</span><span class="stat-value">${d.net_rating}</span></div>
         <div class="stat-item"><span class="stat-label">Pace</span><span class="stat-value">${d.pace}</span></div>
         <div class="stat-item"><span class="stat-label">ORtg</span><span class="stat-value">${d.ortg}</span></div>
         <div class="stat-item"><span class="stat-label">DRtg</span><span class="stat-value">${d.drtg}</span></div>
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr('fill', 'currentColor')
       .attr('text-anchor', 'middle')
       .style('font-weight', 'bold')
-      .text('Net Rating (Adj for opponent)');
+      .text('SRS (Adj Net Rating)');
 
     // Grid lines
     g.append('g')
