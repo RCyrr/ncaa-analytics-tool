@@ -81,13 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // View Toggle Listeners
     toggleViewBtn.on('click', () => {
+      console.log('Show Bracket button clicked');
+      if (bracketView.empty()) {
+        console.error('Error: #bracket-view element not found');
+        showStatus('Error: Bracket view element not found');
+        return;
+      }
       bracketView.classed('hidden', false);
+      console.log('Bracket view visibility toggled');
       if (bracketData.length === 0) {
+        console.log('Loading bracket data...');
         loadBracketData();
       }
     });
 
     backToDashboardBtn.on('click', () => {
+      console.log('Back to Dashboard button clicked');
       bracketView.classed('hidden', true);
     });
 

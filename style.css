@@ -299,3 +299,82 @@ input:focus, select:focus {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   font-size: 0.875rem;
 }
+
+/* Bracket View Styles */
+#bracket-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-main);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.bracket-header {
+  padding: 1.5rem 2rem;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.bracket-header h2 {
+  color: var(--primary);
+}
+
+#bracket-container {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  min-width: 1400px;
+}
+
+.bracket-svg {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+}
+
+.bracket-game {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.bracket-game:hover {
+  opacity: 0.8;
+}
+
+.bracket-team-text {
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  fill: var(--text-main);
+}
+
+.bracket-seed-text {
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  fill: var(--text-muted);
+}
+
+.bracket-line {
+  stroke: #cbd5e1;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.region-label {
+  font-size: 24px;
+  font-weight: 700;
+  fill: var(--primary);
+  text-transform: uppercase;
+  opacity: 0.1;
+}
