@@ -98,6 +98,42 @@ body {
   text-decoration: underline;
 }
 
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-main);
+}
+
+.view-toggle {
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 input, select {
   width: 100%;
   padding: 0.75rem;
